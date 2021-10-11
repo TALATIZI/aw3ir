@@ -6,9 +6,10 @@
     font-family:'source sans pro',calibri, Tahoma, sans-serif;
     font-size: 16px;
     padding: 20px;
+    background: white;
 }
 img{
-    border-color: black;
+    border:3px solid black;
     width: 150px;
     float:right;
 }
@@ -20,12 +21,12 @@ img{
     text-align:justify;
 }
 h1{
-    color:black ;
+    color:#338888 ;
     
 }
 h3{
     font-size: 25px;
-    color: black;
+    color:#338888;
 }
 h2{
     font-size: 28px;
@@ -33,5 +34,5 @@ h2{
     border-bottom: 3px solid;
 }
 body{
-    background-color:#FFFFF1;
+    background-color:gray;
 }
