@@ -1,11 +1,9 @@
 img{
-    width: 100px;
+    width: 150px;
     ;
 }
-h1{
-    color:blue;
-    font-style: oblique;
-}
+
+
 body{
-    background-color:rgb(176, 202, 228);
+    background-color:rgb(125, 135, 139);
 }
