@@ -1,9 +1,37 @@
-img{
-    width: 150px;
-    ;
+
+.page{
+    border:5px solid black;
+    width: 800px;
+    margin: auto;
+    font-family:'source sans pro',calibri, Tahoma, sans-serif;
+    font-size: 16px;
+    padding: 20px;
 }
-
-
+img{
+    border-color: black;
+    width: 150px;
+    float:right;
+}
+.cordonnées{
+    float: left;
+}
+.section{
+    margin-bottom: 70px;
+    text-align:justify;
+}
+h1{
+    color:black ;
+    
+}
+h3{
+    font-size: 25px;
+    color: black;
+}
+h2{
+    font-size: 28px;
+    color:#338888 ;
+    border-bottom: 3px solid;
+}
 body{
-    background-color:rgb(125, 135, 139);
+    background-color:#FFFFF1;
 }
