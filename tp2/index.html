@@ -4,53 +4,64 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>TP2</title>
-        <link rel="stylesheet" href="forml.css">
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-    
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
+        
     </head>
     <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+       
+        
+        
+       
         <form>
+            <h1>tp2-AW</h1>
+            <img src="../galilee.png" alt="Logo Galilee"/>
             <h1>cordonné personnel</h1>
             <div class="corps-formulaire">
                 <div class=" boite">
+                    <i class="fas fa-user"></i>
                     <label>NOM :</label>
-                    <input  type="text">
+                    <input  type="text" placeholder="nom">
+
                 </div>
             </br>
                 <div class=" boite">
+                    <i class="fas fa-user"></i>
                     <label>Prenom :</label>
-                    <input  type="text">
+                    <input  type="text" placeholder="prenom">
                 </div>
             </br>
                 <div class=" boite">
+                    <i class="fas fa-birthday-cake"></i>
                     <label>date de naissance :</label>
-                    <input  type="date">
+                    <input  type="date" placeholder="date de naissance">
                 </div>
             </br>
+            <div class=" boite">
+                <i class="fas fa-map-marker-alt"></i>
+                <label>Adresse:</label>
+                <input  type="text" placeholder="votre adresse">
+            </div>
+        </br>
+        <div class=" boite">
+            <i class="far fa-envelope"></i>
+            <label>Mail:</label>
+            <input  type="text" placeholder="votre mail">
+        </div>
+    </br>
+            </div>
+            <div class="pied-formulaire" align="center" > 
+                <input type="button" value="Valider"/>
+
             </div>
 
-        </form>
+            <div class="erreur" id="error"> </div> 
+
+
            
 
         </form>

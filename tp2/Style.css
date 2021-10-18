@@ -1,0 +1,35 @@
+body{
+    background-color: #f1d29d;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+form{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+form h1 {
+    font-size: 20px;
+}
+form.corps-formulaire{
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+form.corps-formulaire.boite{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+form.corps-formulaire.boite input{
+    margin-top: 5px;
+    border:1px solid #C9C9C9
+   
+}
+erreur{
+    couleur de fond : rose
+    padding : 5px
+    bordure : 1px
+}
