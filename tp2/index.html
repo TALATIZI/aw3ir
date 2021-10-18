@@ -8,49 +8,66 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+        <script defer src="formulaire.js"></script>
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         
+
+        <h1 >Saisie d'une fiche "Personne"</h1>
+        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+        <!--<link rel="stylesheet" href="style.css">-->
+        <!--<script src="js/main.js"></script>-->
     </head>
     <body>        
        
-        
-        
-       
-        <form>
+        <form action="formulaire.js" methode="post" id="form">
             <h1>tp2-AW</h1>
             <img src="../galilee.png" alt="Logo Galilee"/>
-            <h1>cordonné personnel</h1>
+            <h1>Formulaire</h1>
+
             <div class="corps-formulaire">
                 <div class=" boite">
                     <i class="fas fa-user"></i>
-                    <label>NOM :</label>
-                    <input  type="text" placeholder="nom">
-
+                    <p>
+                        <label>Nom :</label>
+                        <input  type="text" name="nom" id="nom" placeholder="nom" min="5" maxlength="20" class="inputgrp">
+                    </p>
+                   
                 </div>
             </br>
                 <div class=" boite">
                     <i class="fas fa-user"></i>
-                    <label>Prenom :</label>
-                    <input  type="text" placeholder="prenom">
+                    <p>
+                        <label>Prenom :</label>
+                        <input  type="text"  name="prenom" id="prenom" placeholder="prenom" min="5" maxlength="20" class="inputgrp">
+                    </p>
+                   
                 </div>
             </br>
                 <div class=" boite">
                     <i class="fas fa-birthday-cake"></i>
-                    <label>date de naissance :</label>
-                    <input  type="date" placeholder="date de naissance">
+                    <p>
+                        <label>Date de Naissance :</label>
+                        <input  type="date" id="date" placeholder="date de naissance" class="inputgrp">   
+                    </p>
+                    
                 </div>
             </br>
             <div class=" boite">
                 <i class="fas fa-map-marker-alt"></i>
-                <label>Adresse:</label>
-                <input  type="text" placeholder="votre adresse">
+                <p>
+                    <label>Adresse:</label>
+                    <input  type="text" id="adresse postale" placeholder="EX: Rue la fayette"min="5" maxlength="50" class="inputgrp">
+                </p>
+                
             </div>
         </br>
         <div class=" boite">
             <i class="far fa-envelope"></i>
-            <label>Mail:</label>
-            <input  type="text" placeholder="votre mail">
+            <p>
+                <label>Mail:</label>
+                <input  type="text" id="mail" placeholder="hello@gmail.fr" min="5" maxlength="30" class="inputgrp">  
+            </p>
+            
         </div>
     </br>
             </div>
@@ -59,11 +76,14 @@
 
             </div>
 
-            <div class="erreur" id="error"> </div> 
-
-
-           
 
         </form>
+        <div id="error">
+        
+        </div>
+        <br/>
+        <div id="Resultat">
+    
+        </div>
     </body>
 </html>
