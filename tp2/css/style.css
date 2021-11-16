@@ -1,0 +1,92 @@
+
+
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+
+body {
+	font-family: 'lato';
+	background-image:url("./fond.jpg") ;
+}
+
+ #bg {
+     
+    	position: absolute;
+      height: 100%;
+      width: 100%;
+    	top: 0;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;	
+    }
+    
+   .contact{
+      color: black;
+      padding: 20px;
+      opacity: 0.8;
+    }
+  
+    form{
+        padding: 40px;
+    }
+  
+    .form-group{
+        margin: 20px;
+    }
+  
+    .form-group input{
+      width: 350px;
+      padding: 8px;
+      font-size: 15px;
+      color: rgb(27, 27, 27);
+      margin-bottom: 5px;
+  }
+  
+    .card{
+
+        background-color: rgb(224, 224, 224);
+        padding: 0px;
+        margin: 350px;
+        opacity: 0.9;
+
+    }
+  
+  
+   input.invalid{
+      border: 1px solid red;
+  }
+  
+  .error-hint{
+      color: red;
+  }
+  
+  button{
+  
+      padding: 5px;
+      font-size: 15px;
+      background: none;
+      border: 1px solid rgb(27, 158, 136);
+      border-radius: 10px;
+      transition: all 0.5s;
+      cursor: pointer;
+  }
+  
+  button:hover{
+      background-color:rgb(47, 150, 197);
+      border: black;
+      color: white;
+  }
+  
+  .hidden{
+      display: none;
+  }
+  
+  .success-message{
+      padding: 40px;
+      font-size: 25px;
+      text-align: center;
+  }
