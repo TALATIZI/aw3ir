@@ -1,4 +1,11 @@
-const form = document.querySelector('form');
+
+// const isValiddate = (date) => {
+//     const re = /^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
+//     return re.test(String(date).toLowerCase());
+// };
+
+window.onload = function () {  
+    const form = document.querySelector('form');
 const succesMessage = document.querySelector('.success-message');
 const firstNameInput = document.querySelector('input[name= "firstname"]');
 const lastNameInput = document.querySelector('input[name= "lastname"]');
@@ -45,23 +52,24 @@ const validateInputs = () => {
     if (!lastNameInput.value || lastNameInput.value.length >= 20) {
         invalidateInputElm(lastNameInput);
         isFormValid = false;
+    
     }
-    if (!isValidEmail(adressInput.value)) {
-        invalidateInputElm(adressInput);
-        isFormValid = false;
-    }
-    if (!isValidEmail(emailInput.value)) {
-        invalidateInputElm(emailInput);
-        isFormValid = false;
-    }
-
-    if (!isValiddate(dateInput.value)) {
-
+    if (!dateInput.value) {
         invalidateInputElm(dateInput);
         isFormValid = false;
     }
+    if (!adressInput.value || adressInput.value.length >= 20) {
+        invalidateInputElm(adressInput);
+        isFormValid = false;
 
-};
+}
+    if (!isValidEmail(emailInput.value)) {
+        invalidateInputElm(adressInput);
+        isFormValid = false;
+    };
+    
+
+} 
 
 form.addEventListener("submit", (e) => {
 
@@ -72,11 +80,20 @@ form.addEventListener("submit", (e) => {
 
     if (isFormValid) {
         form.remove();
-        succesMessage.classList.remove("hidden");
-        alert('bonjour, firstname',);
-        alert('vous etre née le   et vous habitez href="https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"')
+         succesMessage.classList.remove("hidden");
+        //  alert('bonjour');
+        var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+       const elt= document.getElementById('poste');
+       const elt1=document.getElementById('piste');
+        elt.innerHTML=firstNameInput.value;
+     elt1.innerHTML=dateInput.value;
+
+myModal.show();
+
     }
 });
+
+
 // to catch errors in every input
 inputs.forEach((input) => {
     input.addEventListener("input", (e) => {
@@ -86,14 +103,9 @@ inputs.forEach((input) => {
 });
 
 const isValidEmail = (email) => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 };
 
-
-
-const isValiddate = (date) => {
-    const re = /^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
-    return re.test(String(date).toLowerCase());
+     console.log( "DOM ready!" );
 }
-
