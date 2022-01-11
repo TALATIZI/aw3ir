@@ -1,9 +1,29 @@
+let firstName = $("#firstname");
+    let lastName = $("#lastname");
+    let birthDay = $("#birthDay");
+    let email = $("#email");
+    let address = $("#address"); 
+    let phone = $("#phone");
 
-// const isValiddate = (date) => {
-//     const re = /^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
-//     return re.test(String(date).toLowerCase());
-// };
+    let firstNameCounter = $("#firstNameCounter");
+    let lastNameCounter = $("#lastNameCounter");
 
+    var nbrChF = 0;
+    var nbrChL = 0; 
+
+    
+
+    console.log(firstNameCounter);
+
+    firstName.keypress(()=> {
+        nbrChF += 1;
+        firstNameCounter.text(nbrChF) ;
+    });
+
+    lastName.keypress(() =>{
+        nbrChL += 1;
+        lastNameCounter.text(nbrChL);
+    });
 window.onload = function () {  
     const myModal = new bootstrap.Modal(document.getElementById('myModal'), focus)
 const form = document.querySelector('form');
@@ -69,7 +89,6 @@ const validateInputs = () => {
         isFormValid = false;
     };
     
-
 } 
 
 form.addEventListener("submit", (e) => {
@@ -94,19 +113,48 @@ myModal.show();
     }
 });
 
-
 // to catch errors in every input
 inputs.forEach((input) => {
     input.addEventListener("input", (e) => {
         e.preventDefault();
         validateInputs();
     });
+    contactStore.add(document.querySelector("#firstname").value, document.querySelector("#lastname").value, newdate, document.querySelector("#adresse").value, document.querySelector("#email").value);
+        document.querySelector("tbody").innerHTML = "";
+        var listecontact = contactStore.getList();
+        for (var index in listecontact) {
+            document.querySelector("tbody").innerHTML =
+                document.querySelector("tbody").innerHTML +
+                                "<tr><td>" +
+                                listecontact[index].name +
+                                "</td><td>" +
+                                listecontact[index].firstname +
+                                "</td><td>" +
+                                listecontact[index].date +
+                                "</td><td> <a href= 'https://maps.googleapis.com/maps/api/staticmap?markers=${document.querySelector(" + listecontact[index].adress + ").value}&zoom=7&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg' target='_blank'>" +
+                                listecontact[index].adress +
+                                " </a> </td><td> <a href='mailto:'>"+
+                                listecontact[index].mail +
+                                "</a></td></tr>" ;
+        }
+
+
+        document.querySelector("#lastname").value = "";
+        document.querySelector("#firstname").value = "";
+        document.querySelector("#Date-de-naissance").value = "";
+        document.querySelector("#adresse").value = "";
+        document.querySelector("#email").value = "";
+        document.querySelector(`#lastname + span`).textContent = "";
+        document.querySelector(`#firtname + span`).textContent = "";
 });
 
 const isValidEmail = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 };
+function calcNbChar(id) {
+    document.querySelector(`#${id} + span`).textContent = document.querySelector(`#${id}`).value.length + " car.";
+}
 
      console.log( "DOM ready!" );
 }
