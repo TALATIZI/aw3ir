@@ -1,3 +1,4 @@
+$(document).ready(() => {
 let firstName = $("#firstname");
     let lastName = $("#lastname");
     let birthDay = $("#birthDay");
@@ -10,9 +11,7 @@ let firstName = $("#firstname");
 
     var nbrChF = 0;
     var nbrChL = 0; 
-
     
-
     console.log(firstNameCounter);
 
     firstName.keypress(()=> {
@@ -24,6 +23,7 @@ let firstName = $("#firstname");
         nbrChL += 1;
         lastNameCounter.text(nbrChL);
     });
+}); 
 window.onload = function () {  
     const myModal = new bootstrap.Modal(document.getElementById('myModal'), focus)
 const form = document.querySelector('form');
